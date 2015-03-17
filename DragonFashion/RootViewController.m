@@ -46,9 +46,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DragonCell"];
-//    Dragon *dragon = [self.dragons objectAtIndex:indexPath.row]; // creates a dragon w/custom initializer
+    Dragon *dragon = [self.dragons objectAtIndex:indexPath.row]; // creates a dragon w/custom initializer
     cell.textLabel.text = [[self.dragons objectAtIndex:indexPath.row] fullName];  // set the dragon's name on row
-//    cell.detailTextLabel.text = dragon.signatureClothingItem; // in SB set the Style subtitle on the cell
+    cell.detailTextLabel.text = dragon.signatureClothingItem; // in SB set the Style subtitle on the cell
     cell.detailTextLabel.text = [[self.dragons objectAtIndex:indexPath.row] signatureClothingItem];
     return cell;
 }
