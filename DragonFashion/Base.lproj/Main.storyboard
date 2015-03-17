@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cek-5c-stU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Dragon Fashion-->
@@ -15,13 +17,158 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="BLP-zn-xQ5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DragonCell" textLabel="L5K-lP-9iy" detailTextLabel="qyn-7d-YZI" style="IBUITableViewCellStyleSubtitle" id="ghg-gK-RwB">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ghg-gK-RwB" id="muH-3q-jRn">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L5K-lP-9iy">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyn-7d-YZI">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7l6-uJ-9nh" kind="show" identifier="DragonView" id="ePE-z1-dVb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="kk8-nK-yEn"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3zu-Ax-fdf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BLP-zn-xQ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="2vD-1a-Tap"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="BLP-zn-xQ5" secondAttribute="bottom" id="4r1-4W-zSS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BLP-zn-xQ5" secondAttribute="trailing" constant="-16" id="FQ0-wA-CRu"/>
+                            <constraint firstItem="BLP-zn-xQ5" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ZWQ-td-8Vr"/>
+                            <constraint firstAttribute="trailing" secondItem="BLP-zn-xQ5" secondAttribute="trailing" id="rHR-fe-QEG"/>
+                            <constraint firstItem="BLP-zn-xQ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tlj-tR-00n"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BLP-zn-xQ5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4r1-4W-zSS"/>
+                                <exclude reference="2vD-1a-Tap"/>
+                                <exclude reference="FQ0-wA-CRu"/>
+                                <exclude reference="ZWQ-td-8Vr"/>
+                                <exclude reference="rHR-fe-QEG"/>
+                                <exclude reference="tlj-tR-00n"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BLP-zn-xQ5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4r1-4W-zSS"/>
+                                <exclude reference="2vD-1a-Tap"/>
+                                <exclude reference="FQ0-wA-CRu"/>
+                                <include reference="ZWQ-td-8Vr"/>
+                                <include reference="rHR-fe-QEG"/>
+                                <include reference="tlj-tR-00n"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Dragon Fashion" id="HVe-Wn-Cyu"/>
+                    <connections>
+                        <outlet property="tableView" destination="BLP-zn-xQ5" id="07f-hc-IBz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1024.5" y="-395"/>
+        </scene>
+        <!--Clothing Detail View Controller-->
+        <scene sceneID="l0K-PT-9dl">
+            <objects>
+                <viewController id="7l6-uJ-9nh" customClass="ClothingDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tS5-wj-tb0"/>
+                        <viewControllerLayoutGuide type="bottom" id="bnr-kn-Xng"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lgz-26-37o">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu6-vO-tzm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="KmM-3Y-73s"/>
+                                    <constraint firstAttribute="width" constant="155" id="umv-8M-0bY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KmM-3Y-73s"/>
+                                        <exclude reference="umv-8M-0bY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KmM-3Y-73s"/>
+                                        <include reference="umv-8M-0bY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="cu6-vO-tzm" secondAttribute="centerY" id="9cf-Z7-RWl"/>
+                            <constraint firstAttribute="centerX" secondItem="cu6-vO-tzm" secondAttribute="centerX" id="r0P-wV-fqu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cu6-vO-tzm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9cf-Z7-RWl"/>
+                                <exclude reference="r0P-wV-fqu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cu6-vO-tzm"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9cf-Z7-RWl"/>
+                                <include reference="r0P-wV-fqu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clothingLabel" destination="cu6-vO-tzm" id="bc1-MK-p9D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kIK-Ef-tKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="-395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3u8-6U-Vwq">

@@ -14,6 +14,8 @@
 		1875B0FE1AB8691200A0E9D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1875B0FD1AB8691200A0E9D5 /* Images.xcassets */; };
 		1875B1011AB8691200A0E9D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1875B0FF1AB8691200A0E9D5 /* LaunchScreen.xib */; };
 		1875B10D1AB8691200A0E9D5 /* DragonFashionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1875B10C1AB8691200A0E9D5 /* DragonFashionTests.m */; };
+		18E43C7D1AB89AEB007FCE79 /* ClothingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E43C7C1AB89AEB007FCE79 /* ClothingDetailViewController.m */; };
+		18E918131AB88A7100F672AF /* Dragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E918121AB88A7100F672AF /* Dragon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		1875B1061AB8691200A0E9D5 /* DragonFashionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonFashionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1875B10B1AB8691200A0E9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1875B10C1AB8691200A0E9D5 /* DragonFashionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonFashionTests.m; sourceTree = "<group>"; };
+		18E43C7B1AB89AEB007FCE79 /* ClothingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothingDetailViewController.h; sourceTree = "<group>"; };
+		18E43C7C1AB89AEB007FCE79 /* ClothingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClothingDetailViewController.m; sourceTree = "<group>"; };
+		18E918111AB88A7100F672AF /* Dragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dragon.h; path = ../Dragon.h; sourceTree = "<group>"; };
+		18E918121AB88A7100F672AF /* Dragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dragon.m; path = ../Dragon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				1875B0F51AB8691200A0E9D5 /* AppDelegate.m */,
 				1875B0F71AB8691200A0E9D5 /* RootViewController.h */,
 				1875B0F81AB8691200A0E9D5 /* RootViewController.m */,
+				18E43C7B1AB89AEB007FCE79 /* ClothingDetailViewController.h */,
+				18E43C7C1AB89AEB007FCE79 /* ClothingDetailViewController.m */,
+				18E918111AB88A7100F672AF /* Dragon.h */,
+				18E918121AB88A7100F672AF /* Dragon.m */,
 				1875B0FA1AB8691200A0E9D5 /* Main.storyboard */,
 				1875B0FD1AB8691200A0E9D5 /* Images.xcassets */,
 				1875B0FF1AB8691200A0E9D5 /* LaunchScreen.xib */,
@@ -221,6 +231,8 @@
 			files = (
 				1875B0F91AB8691200A0E9D5 /* RootViewController.m in Sources */,
 				1875B0F61AB8691200A0E9D5 /* AppDelegate.m in Sources */,
+				18E43C7D1AB89AEB007FCE79 /* ClothingDetailViewController.m in Sources */,
+				18E918131AB88A7100F672AF /* Dragon.m in Sources */,
 				1875B0F31AB8691200A0E9D5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
